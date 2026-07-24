@@ -1,0 +1,7 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#151A23"/>
+  <text x="85" y="420" font-family="EB Garamond 12" font-weight="bold" font-size="300" fill="#3FC4BB">L</text>
+  <path d="M 205 330 Q 225 326 248 300 L 310 220 Q 330 196 350 220 L 412 300 Q 435 326 455 330"
+        fill="none" stroke="#3FC4BB" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="300.0" y="255.0" width="26" height="26" fill="#3FC4BB"/><rect x="300.0" y="289.0" width="26" height="26" fill="#3FC4BB"/><rect x="334.0" y="255.0" width="26" height="26" fill="#3FC4BB"/><rect x="334.0" y="289.0" width="26" height="26" fill="#3FC4BB"/>
+</svg>

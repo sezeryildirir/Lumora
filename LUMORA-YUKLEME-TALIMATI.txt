@@ -1,0 +1,43 @@
+LUMORA TEKNIK GUNCELLEME PAKETI
+================================
+
+Bu paket c0c7aaf numarali teknik guncellemeyi icerir.
+
+Guncellenen / eklenen dosyalar:
+- index.html
+- favicon.svg
+- robots.txt
+- sitemap.xml
+- vercel.json
+
+GITHUB'A TERMINAL KULLANMADAN YUKLEME
+-------------------------------------
+
+1. https://github.com/sezeryildirir/Lumora adresini acin.
+2. "Add file" > "Upload files" secenegine tiklayin.
+3. ZIP dosyasini bilgisayarinizda acin.
+4. Paketin icindeki su 5 dosyayi GitHub yukleme alanina surukleyin:
+   index.html
+   favicon.svg
+   robots.txt
+   sitemap.xml
+   vercel.json
+5. "Commit changes" alaninda mesaj olarak sunu yazin:
+   Fix production SEO and broken site links
+6. "Commit directly to the main branch" secenegini secin.
+7. "Commit changes" butonuna tiklayin.
+
+Vercel, GitHub'a bagliysa yuklemeden sonra production deployment otomatik
+baslayacaktir.
+
+CANLI YAYIN SONRASI KONTROL
+---------------------------
+
+Asagidaki adreslerin acildigini kontrol edin:
+
+https://www.lumorapropertyservices.com/
+https://www.lumorapropertyservices.com/robots.txt
+https://www.lumorapropertyservices.com/sitemap.xml
+
+Not: ZIP dosyasini GitHub'a dogrudan yuklemeyin. Once ZIP'i acin ve icindeki
+5 site dosyasini repository'nin ana dizinine yukleyin.

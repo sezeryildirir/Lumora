@@ -5,11 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lumora Property Services | Cleaning &amp; Complete Property Care in Los Angeles</title>
 <meta name="description" content="Not just cleaning — complete property care in Los Angeles. House cleaning, deep cleaning, Airbnb turnovers, property care &amp; maintenance. Licensed &amp; insured. Free quotes.">
-<link rel="canonical" href="https://lumorapropertyservices.com/">
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon_192.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://www.lumorapropertyservices.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lumora Property Services">
+<meta property="og:title" content="Lumora Property Services | Cleaning &amp; Complete Property Care in Los Angeles">
+<meta property="og:description" content="Not just cleaning — complete property care in Los Angeles. Request a free quote for residential, deep, move-out and vacation-rental cleaning.">
+<meta property="og:url" content="https://www.lumorapropertyservices.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lumora Property Services">
+<meta name="twitter:description" content="Cleaning and complete property care across Los Angeles.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,7 +24,7 @@
   "@type": "LocalBusiness",
   "additionalType": "https://schema.org/HouseCleaningService",
   "name": "Lumora Property Services",
-  "url": "https://lumorapropertyservices.com",
+  "url": "https://www.lumorapropertyservices.com/",
   "telephone": "+1-424-279-2913",
   "email": "info@lumorapropertyservices.com",
   "address": {"@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US"},
@@ -59,6 +64,7 @@
         --cream:#F2F0EB;--cream-2:#FAF9F6;--ink:#20242E;--muted:#6B7280;--line:#E5E1D8}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
+  section[id]{scroll-margin-top:150px}
   body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream-2);line-height:1.6}
   h1,h2,h3,.serif{font-family:'EB Garamond',Georgia,serif}
   img{max-width:100%}
@@ -71,6 +77,9 @@
   .btn-outline:hover{background:var(--teal-light);color:var(--navy)}
   .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
   .nav-cta{display:none}
+  .skip-link{position:fixed;left:16px;top:-80px;z-index:100;background:#fff;color:var(--navy);
+             padding:10px 16px;border-radius:0 0 6px 6px;font-weight:600}
+  .skip-link:focus{top:0}
   header{position:sticky;top:0;z-index:50;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:132px}
   .logo{display:flex;align-items:center;text-decoration:none}
@@ -200,6 +209,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header>
   <div class="wrap nav">
     <a class="logo" href="index.html" aria-label="Lumora Property Services — Home">
@@ -222,7 +232,7 @@
 </svg>
     </a>
     <nav aria-label="Main">
-      <ul>
+      <ul id="primary-menu">
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#vacation-rentals">Vacation Rentals</a></li>
         <li><a href="index.html#property-care">Property Care</a></li>
@@ -231,11 +241,11 @@
         <li><a href="index.html#quote" class="btn">Get a Free Quote</a></li>
       </ul>
       <a href="index.html#quote" class="btn nav-cta">Free Quote</a>
-      <button class="menu-btn" aria-label="Menu">☰</button>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">☰</button>
     </nav>
   </div>
 </header>
-<main id="top">
+<main id="main-content">
 
   <section class="hero">
     <div class="wrap">
@@ -408,25 +418,25 @@
     <div class="wrap">
       <div class="kicker">Where We Work</div>
       <h2 class="sec-title">Areas We Serve Across Los Angeles</h2>
-      <p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto">Click your neighborhood for local details — and if you don't see it, message us anyway.</p>
+      <p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto">We serve these communities and nearby neighborhoods. If you don't see yours, message us — we can often accommodate it.</p>
       <div class="chips">
-        <a class="chip" href="areas/los-angeles.html">Los Angeles</a>
-        <a class="chip" href="areas/hollywood.html">Hollywood</a>
-        <a class="chip" href="areas/west-hollywood.html">West Hollywood</a>
-        <a class="chip" href="areas/beverly-hills.html">Beverly Hills</a>
-        <a class="chip" href="areas/santa-monica.html">Santa Monica</a>
-        <a class="chip" href="areas/culver-city.html">Culver City</a>
-        <a class="chip" href="areas/burbank.html">Burbank</a>
-        <a class="chip" href="areas/glendale.html">Glendale</a>
-        <a class="chip" href="areas/studio-city.html">Studio City</a>
-        <a class="chip" href="areas/sherman-oaks.html">Sherman Oaks</a>
-        <a class="chip" href="areas/pasadena.html">Pasadena</a>
-        <a class="chip" href="areas/marina-del-rey.html">Marina del Rey</a>
-        <a class="chip" href="areas/venice.html">Venice</a>
-        <a class="chip" href="areas/brentwood.html">Brentwood</a>
-        <a class="chip" href="areas/westwood.html">Westwood</a>
-        <a class="chip" href="areas/koreatown.html">Koreatown</a>
-        <a class="chip" href="areas/dtla.html">Downtown LA</a>
+        <span class="chip">Los Angeles</span>
+        <span class="chip">Hollywood</span>
+        <span class="chip">West Hollywood</span>
+        <span class="chip">Beverly Hills</span>
+        <span class="chip">Santa Monica</span>
+        <span class="chip">Culver City</span>
+        <span class="chip">Burbank</span>
+        <span class="chip">Glendale</span>
+        <span class="chip">Studio City</span>
+        <span class="chip">Sherman Oaks</span>
+        <span class="chip">Pasadena</span>
+        <span class="chip">Marina del Rey</span>
+        <span class="chip">Venice</span>
+        <span class="chip">Brentwood</span>
+        <span class="chip">Westwood</span>
+        <span class="chip">Koreatown</span>
+        <span class="chip">Downtown LA</span>
       </div>
     </div>
   </section>
@@ -519,8 +529,8 @@
 <a class="wa-float" href="https://wa.me/14242792913?text=Hi%20Lumora!%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4.2.5.8 1.9.8 2 .1.1.1.3 0 .5-.1.2-.2.3-.3.5l-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.7.8 2 1 .3.2.5.3.6.4.1.2.1.7-.1 1.4z"/></svg></a>
 <script>
 (function(){var b=document.querySelector('.menu-btn'),n=document.querySelector('.nav');
-if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.textContent=o?'✕':'☰';});
-n.querySelectorAll('nav ul a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.textContent='☰';})});}})();
+if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.textContent=o?'✕':'☰';b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Close menu':'Open menu');});
+n.querySelectorAll('nav ul a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.textContent='☰';b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');})});}})();
 (function(){var w=document.querySelector('.wa-float'),h=document.querySelector('.hero');
 if(!w)return;function t(){var y=h?h.offsetHeight*0.6:400;
 window.scrollY>y?w.classList.add('show'):w.classList.remove('show');}
