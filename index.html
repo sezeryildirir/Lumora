@@ -120,6 +120,14 @@
   footer a:hover{color:var(--teal-light)}
   .copy{border-top:1px solid #2A3040;padding-top:22px;text-align:center;font-size:13px}
 
+  /* photo sections */
+  .split{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .split img{width:100%;border-radius:14px;box-shadow:0 18px 44px rgba(22,27,38,.18);display:block}
+  .split h2{text-align:left}
+  .split .kicker{text-align:left}
+  .van-band{background:var(--cream)}
+  .van-band p{color:var(--muted);font-size:16px;margin-bottom:22px}
+
   /* whatsapp floating button */
   .wa-float{position:fixed;bottom:26px;right:26px;z-index:60;width:58px;height:58px;border-radius:50%;
             background:#25D366;display:flex;align-items:center;justify-content:center;
@@ -128,6 +136,7 @@
   .wa-inline{display:inline-flex;align-items:center;gap:8px}
 
   @media(max-width:900px){
+    .split{grid-template-columns:1fr}
     .cards,.steps{grid-template-columns:1fr}
     .feat{grid-template-columns:1fr}
     .foot{grid-template-columns:1fr 1fr}
@@ -255,6 +264,36 @@
           <h3>Relax &amp; Shine</h3>
           <p>Our vetted pros arrive on time with everything needed. Walk into a sparkling home — guaranteed.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap split">
+      <div>
+        <img src="assets/team.jpg" alt="The Lumora Property Services cleaning team"
+             onerror="this.parentElement.parentElement.parentElement.style.display='none'">
+      </div>
+      <div>
+        <div class="kicker">Meet the Team</div>
+        <h2 class="sec-title">Friendly Faces You Can Trust</h2>
+        <p style="color:var(--muted);margin-bottom:18px">Every Lumora professional is background-checked, fully trained and takes real pride in the shine they leave behind. You'll see the same familiar faces at every visit.</p>
+        <a href="#quote" class="btn">Book Your First Clean</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="van-band">
+    <div class="wrap split">
+      <div>
+        <div class="kicker">On the Road</div>
+        <h2 class="sec-title">Spot Us Around Los Angeles</h2>
+        <p>Our fully equipped vans bring everything needed for a flawless clean — supplies, eco-friendly products and a detail-obsessed team. See one in your neighborhood? We're already nearby.</p>
+        <a href="https://wa.me/14242792913?text=Hi%20Lumora!%20I%27d%20like%20a%20free%20cleaning%20quote." class="btn" target="_blank" rel="noopener">Message Us on WhatsApp</a>
+      </div>
+      <div>
+        <img src="assets/van.jpg" alt="Lumora Property Services branded van in Los Angeles"
+             onerror="this.parentElement.parentElement.parentElement.style.display='none'">
       </div>
     </div>
   </section>
