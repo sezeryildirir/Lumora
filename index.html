@@ -47,9 +47,9 @@
 
   /* header */
   header{position:sticky;top:0;z-index:50;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:104px}
   .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .logo svg{height:44px;width:auto}
+  .header-logo{height:92px;width:auto;display:block}
   .logo-text{color:var(--cream);font-family:'EB Garamond',serif;font-weight:700;font-size:26px;letter-spacing:3px}
   .logo-tag{display:block;color:var(--teal-light);font-size:10px;letter-spacing:3px;font-weight:500}
   nav ul{display:flex;gap:28px;list-style:none;align-items:center}
@@ -60,7 +60,7 @@
 
   /* hero */
   .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--cream);
-        padding:64px 0 110px;position:relative;overflow:hidden}
+        padding:96px 0 110px;position:relative;overflow:hidden}
   .hero .wrap{position:relative;z-index:2;max-width:820px;text-align:center}
   .hero h1{font-size:52px;line-height:1.15;font-weight:600;margin-bottom:20px}
   .hero h1 em{color:var(--teal-light);font-style:normal}
@@ -156,18 +156,23 @@
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="Lumora Property Services">
-      <svg viewBox="60 60 800 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M 62 330 C 180 300, 260 190, 385 122 C 402 112, 428 112, 448 124 C 570 190, 680 265, 843 312 C 700 292, 585 235, 455 165 C 435 154, 405 154, 388 164 C 300 215, 190 305, 62 330 Z" fill="#3FC4BB"/>
-        <rect x="565" y="138" width="28" height="72" fill="#3FC4BB"/>
-        <rect x="557" y="126" width="44" height="15" rx="3" fill="#3FC4BB"/>
-        <g fill="#3FC4BB">
-          <rect x="330" y="200" width="46" height="46" rx="6"/><rect x="390" y="200" width="46" height="46" rx="6"/>
-          <rect x="330" y="260" width="46" height="46" rx="6"/><rect x="390" y="260" width="46" height="46" rx="6"/>
-        </g>
-        <path d="M 232 79 C 235 98, 239 102, 258 105 C 239 108, 235 112, 232 131 C 229 112, 225 108, 206 105 C 225 102, 229 98, 232 79 Z" fill="#3FC4BB"/>
-        <path d="M 675 75 C 677 90, 681 94, 695 95 C 681 97, 677 100, 675 115 C 673 100, 669 97, 655 95 C 669 94, 673 90, 675 75 Z" fill="#3FC4BB"/>
-      </svg>
-      <span class="logo-text">LUMORA<span class="logo-tag">PROPERTY SERVICES</span></span>
+      <svg class="header-logo" viewBox="30 40 840 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lumora Property Services">
+  <path d="M 62 330 C 180 300, 260 190, 385 122 C 402 112, 428 112, 448 124 C 570 190, 680 265, 843 312 C 700 292, 585 235, 455 165 C 435 154, 405 154, 388 164 C 300 215, 190 305, 62 330 Z" fill="#3FC4BB"/>
+  <rect x="565" y="138" width="28" height="72" fill="#3FC4BB"/>
+  <rect x="557" y="126" width="44" height="15" rx="3" fill="#3FC4BB"/>
+  <g fill="#3FC4BB">
+    <rect x="330" y="200" width="46" height="46" rx="6"/><rect x="390" y="200" width="46" height="46" rx="6"/>
+    <rect x="330" y="260" width="46" height="46" rx="6"/><rect x="390" y="260" width="46" height="46" rx="6"/>
+  </g>
+  <path d="M 232 79 C 235 98, 239 102, 258 105 C 239 108, 235 112, 232 131 C 229 112, 225 108, 206 105 C 225 102, 229 98, 232 79 Z" fill="#3FC4BB"/>
+  <path d="M 285 36 C 287 50, 290 53, 303 55 C 290 57, 287 60, 285 74 C 283 60, 280 57, 267 55 C 280 53, 283 50, 285 36 Z" fill="#3FC4BB"/>
+  <path d="M 675 69 C 677 84, 681 88, 695 89 C 681 91, 677 94, 675 109 C 673 94, 669 91, 655 89 C 669 88, 673 84, 675 69 Z" fill="#3FC4BB"/>
+  <path d="M 712 129 C 713 138, 716 141, 725 142 C 716 143, 713 146, 712 155 C 711 146, 708 143, 699 142 C 708 141, 711 138, 712 129 Z" fill="#3FC4BB"/>
+  <text x="450" y="560" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-weight="700" font-size="132" letter-spacing="18" fill="#EFEAE0">LUMORA</text>
+  <line x1="110" y1="632" x2="235" y2="632" stroke="#2BA8A0" stroke-width="2.5"/>
+  <line x1="665" y1="632" x2="790" y2="632" stroke="#2BA8A0" stroke-width="2.5"/>
+  <text x="450" y="642" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="30" letter-spacing="8" fill="#2BA8A0">PROPERTY SERVICES</text>
+</svg>
     </a>
     <nav>
       <ul>
@@ -185,23 +190,7 @@
 <main id="top">
   <section class="hero">
     <div class="wrap">
-      <svg class="hero-logo" viewBox="30 40 840 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lumora Property Services">
-  <path d="M 62 330 C 180 300, 260 190, 385 122 C 402 112, 428 112, 448 124 C 570 190, 680 265, 843 312 C 700 292, 585 235, 455 165 C 435 154, 405 154, 388 164 C 300 215, 190 305, 62 330 Z" fill="#3FC4BB"/>
-  <rect x="565" y="138" width="28" height="72" fill="#3FC4BB"/>
-  <rect x="557" y="126" width="44" height="15" rx="3" fill="#3FC4BB"/>
-  <g fill="#3FC4BB">
-    <rect x="330" y="200" width="46" height="46" rx="6"/><rect x="390" y="200" width="46" height="46" rx="6"/>
-    <rect x="330" y="260" width="46" height="46" rx="6"/><rect x="390" y="260" width="46" height="46" rx="6"/>
-  </g>
-  <path d="M 232 79 C 235 98, 239 102, 258 105 C 239 108, 235 112, 232 131 C 229 112, 225 108, 206 105 C 225 102, 229 98, 232 79 Z" fill="#3FC4BB"/>
-  <path d="M 285 36 C 287 50, 290 53, 303 55 C 290 57, 287 60, 285 74 C 283 60, 280 57, 267 55 C 280 53, 283 50, 285 36 Z" fill="#3FC4BB"/>
-  <path d="M 675 69 C 677 84, 681 88, 695 89 C 681 91, 677 94, 675 109 C 673 94, 669 91, 655 89 C 669 88, 673 84, 675 69 Z" fill="#3FC4BB"/>
-  <path d="M 712 129 C 713 138, 716 141, 725 142 C 716 143, 713 146, 712 155 C 711 146, 708 143, 699 142 C 708 141, 711 138, 712 129 Z" fill="#3FC4BB"/>
-  <text x="450" y="560" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-weight="700" font-size="132" letter-spacing="18" fill="#EFEAE0">LUMORA</text>
-  <line x1="110" y1="632" x2="235" y2="632" stroke="#2BA8A0" stroke-width="2.5"/>
-  <line x1="665" y1="632" x2="790" y2="632" stroke="#2BA8A0" stroke-width="2.5"/>
-  <text x="450" y="642" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="30" letter-spacing="8" fill="#2BA8A0">PROPERTY SERVICES</text>
-</svg>
+      
       <h1>A <em>Sparkling Clean</em> Home,<br>Without Lifting a Finger</h1>
       <p>Premium house cleaning across Los Angeles — trusted, insured professionals who treat your home like their own.</p>
       <a href="#quote" class="btn">Get Your Free Quote</a>
