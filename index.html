@@ -163,8 +163,15 @@
   .quote-box label{font-size:13px;font-weight:600;display:block;margin-bottom:6px}
   .quote-box input,.quote-box select,.quote-box textarea{width:100%;padding:12px 14px;border:1px solid var(--line);
        border-radius:8px;font-family:inherit;font-size:15px;background:var(--cream-2)}
+  .quote-box input:focus,.quote-box select:focus,.quote-box textarea:focus{outline:3px solid rgba(43,168,160,.2);border-color:var(--teal)}
   .full{grid-column:1/-1}
   .quote-box .btn{width:100%;font-size:17px}
+  .contact-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:720px;margin:18px auto 0}
+  .contact-actions a{min-height:48px;display:flex;align-items:center;justify-content:center;border:1px solid var(--teal);
+                   border-radius:8px;color:var(--teal-deep);font-weight:600;text-decoration:none;background:#fff}
+  .contact-actions a:hover{background:var(--teal);color:#fff}
+  .form-note{font-size:13px;color:var(--muted);text-align:center;margin-top:-3px}
+  .hp-field{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
   footer{background:var(--navy);color:#AEB4C0;padding:56px 0 28px;font-size:14px}
   .foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
   footer h4{color:var(--cream);font-size:15px;margin-bottom:14px;font-weight:600}
@@ -205,6 +212,7 @@
     .header-logo{height:84px}
     .quote-box form{grid-template-columns:1fr}
     .quote-box{padding:30px 22px}
+    .contact-actions{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -383,9 +391,9 @@
         <li><svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="#3FCFC9"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>Background-checked</strong> — every pro vetted before entering your home.</span></li>
         <li><svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="#3FCFC9"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>Professional equipment</strong> — commercial-grade tools and supplies included.</span></li>
         <li><svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="#3FCFC9"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>Satisfaction guarantee</strong> — free re-clean within 24 hours if anything's missed.</span></li>
-        <li><svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="#3FCFC9"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>Online booking</strong> — quote, book and manage everything from your phone.</span></li>
+        <li><svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="#3FCFC9"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>Online quote requests</strong> — request an estimate from your phone in minutes.</span></li>
         <li><svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="#3FCFC9"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>Transparent pricing</strong> — flat rates, no surprises.</span></li>
-        <li><svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="#3FCFC9"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>Same-day availability</strong> — urgent turnover? We've got you.</span></li>
+        <li><svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="#3FCFC9"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>Same-day service may be available</strong> — contact us for urgent turnovers.</span></li>
       </ul>
     </div>
   </section>
@@ -447,28 +455,39 @@
       <h2 class="sec-title">Get Your Free Quote Today</h2>
       <p class="sec-sub">Tell us a little about your space — we reply within one business hour.</p>
       <div class="quote-box">
-        <form action="#" method="post" onsubmit="alert('Demo form — connect to your booking/CRM system.');return false">
-          <div><label for="name">Full Name</label><input id="name" type="text" placeholder="Jane Smith" required></div>
-          <div><label for="phone">Phone</label><input id="phone" type="tel" placeholder="(424) 555-0100" required></div>
-          <div><label for="email">Email</label><input id="email" type="email" placeholder="jane@email.com" required></div>
-          <div><label for="zip">ZIP Code</label><input id="zip" type="text" placeholder="90210" required></div>
+        <form action="https://formsubmit.co/info@lumorapropertyservices.com" method="post">
+          <input type="hidden" name="_subject" value="New Lumora Quote Request">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://www.lumorapropertyservices.com/thanks.html">
+          <input type="hidden" name="_captcha" value="true">
+          <div class="hp-field" aria-hidden="true"><label for="company-website">Company Website</label><input id="company-website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+          <div><label for="name">Full Name</label><input id="name" name="Full Name" type="text" placeholder="Jane Smith" autocomplete="name" required></div>
+          <div><label for="phone">Phone</label><input id="phone" name="Phone" type="tel" placeholder="(424) 555-0100" autocomplete="tel" required></div>
+          <div><label for="email">Email</label><input id="email" name="Email" type="email" placeholder="jane@email.com" autocomplete="email" required></div>
+          <div><label for="zip">ZIP Code</label><input id="zip" name="ZIP Code" type="text" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" placeholder="90210" autocomplete="postal-code" required></div>
           <div><label for="service">Service</label>
-            <select id="service">
+            <select id="service" name="Service" required>
               <option>Residential Cleaning</option><option>Deep Cleaning</option>
               <option>Move-In / Move-Out</option><option>Airbnb / Vacation Rental Turnover</option>
               <option>Office / Commercial</option><option>Post-Construction</option><option>Property Care</option>
             </select>
           </div>
           <div><label for="size">Home Size</label>
-            <select id="size">
+            <select id="size" name="Home Size" required>
               <option>Studio / 1 Bath</option><option>1 Bed / 1 Bath</option><option>2 Bed / 2 Bath</option>
               <option>3 Bed / 2 Bath</option><option>4+ Bed</option>
             </select>
           </div>
           <div class="full"><label for="notes">Anything we should know?</label>
-            <textarea id="notes" rows="3" placeholder="Pets, parking, focus areas..."></textarea></div>
+            <textarea id="notes" name="Notes" rows="3" placeholder="Pets, parking, focus areas..."></textarea></div>
           <div class="full"><button class="btn" type="submit">Request My Free Quote</button></div>
+          <p class="full form-note">By submitting, you agree that Lumora may contact you about this request. We do not sell your information.</p>
         </form>
+      </div>
+      <div class="contact-actions" aria-label="Contact Lumora">
+        <a href="tel:+14242792913">Call Now</a>
+        <a href="sms:+14242792913?body=Hi%20Lumora!%20I%27d%20like%20a%20free%20quote.">Text Us</a>
+        <a href="https://wa.me/14242792913?text=Hi%20Lumora!%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </section>
@@ -518,6 +537,8 @@
       <div>
         <h4>Contact</h4>
         <ul>
+          <li><a href="tel:+14242792913">Call: +1 (424) 279-2913</a></li>
+          <li><a href="sms:+14242792913?body=Hi%20Lumora!%20I%27d%20like%20a%20free%20quote.">Text: +1 (424) 279-2913</a></li>
           <li><a href="https://wa.me/14242792913?text=Hi%20Lumora!%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener">WhatsApp: +1 (424) 279-2913</a></li>
           <li><a href="mailto:info@lumorapropertyservices.com">info@lumorapropertyservices.com</a></li>
         </ul>
