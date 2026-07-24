@@ -75,6 +75,7 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:132px}
   .logo{display:flex;align-items:center;text-decoration:none}
   .header-logo{height:118px;width:auto;display:block}
+  nav{display:flex;align-items:center;gap:14px}
   nav ul{display:flex;gap:26px;list-style:none;align-items:center}
   nav a{color:var(--cream);text-decoration:none;font-size:15px;font-weight:500}
   nav a:hover{color:var(--teal-light)}
@@ -174,18 +175,23 @@
     .vr-grid{grid-template-columns:1fr 1fr}
     .foot{grid-template-columns:1fr;gap:28px;text-align:left}
     .hero h1{font-size:34px}
-    nav ul{display:none}
-    .menu-btn{display:block}
+    nav ul{flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;
+           background:var(--navy-2);padding:6px 24px 20px;gap:0;z-index:49;
+           box-shadow:0 22px 34px rgba(0,0,0,.45);border-top:1px solid #2A3040;
+           opacity:0;visibility:hidden;transform:translateY(-10px);
+           transition:opacity .22s ease,transform .22s ease,visibility .22s}
+    .nav.open ul{opacity:1;visibility:visible;transform:translateY(0)}
+    nav ul li{border-bottom:1px solid #2A3040}
+    nav ul li:last-child{border-bottom:none;padding-top:16px}
+    nav ul a{display:block;padding:15px 0;font-size:16.5px}
+    nav ul a.btn{display:flex;width:100%;height:50px;font-size:16px}
+    .menu-btn{display:block;width:40px;text-align:center}
     .hero .tagline{display:none}
     .badges{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;justify-items:start;
             max-width:400px;margin-left:auto;margin-right:auto}
     .hero-ctas{flex-direction:column;align-items:stretch;max-width:340px;margin:0 auto}
     .hero-ctas .btn{width:100%}
-    .nav-cta{display:inline-flex;height:38px;padding:0 16px;font-size:13.5px;margin-right:12px}
-    .nav.open ul{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;
-                 background:var(--navy);padding:10px 24px 22px;gap:16px;
-                 box-shadow:0 14px 28px rgba(0,0,0,.35);z-index:49}
-    .nav.open ul a{font-size:17px}
+    .nav-cta{display:inline-flex;height:38px;padding:0 16px;font-size:13.5px}
     .nav{height:96px}
     .header-logo{height:84px}
     .quote-box form{grid-template-columns:1fr}
@@ -513,8 +519,8 @@
 <a class="wa-float" href="https://wa.me/14242792913?text=Hi%20Lumora!%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4.2.5.8 1.9.8 2 .1.1.1.3 0 .5-.1.2-.2.3-.3.5l-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.7.8 2 1 .3.2.5.3.6.4.1.2.1.7-.1 1.4z"/></svg></a>
 <script>
 (function(){var b=document.querySelector('.menu-btn'),n=document.querySelector('.nav');
-if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open')});
-n.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open')})});}})();
+if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.textContent=o?'✕':'☰';});
+n.querySelectorAll('nav ul a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.textContent='☰';})});}})();
 (function(){var w=document.querySelector('.wa-float'),h=document.querySelector('.hero');
 if(!w)return;function t(){var y=h?h.offsetHeight*0.6:400;
 window.scrollY>y?w.classList.add('show'):w.classList.remove('show');}
